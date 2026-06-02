@@ -849,6 +849,122 @@ button[type="submit"]:hover {
     color: #ff7a1a;
     text-decoration: underline;
 }
+
+/*-----------CADASTRO---------------------*/
+/* CADASTRO */
+
+.conteudo-cadastro {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.cadastro-box {
+    width: 100%;
+    max-width: 360px;
+    background: #1f1f1f;
+    border: 1px solid #F26807;
+    border-radius: 16px;
+    padding: 30px;
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,.4);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.titulo-cadastro {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.cadastro-box > p {
+    color: #bdbdbd;
+    margin-bottom: 10px;
+}
+
+.cadastro-box form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.caixa-cadastro {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.caixa-cadastro label {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.caixa-cadastro input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    outline: none;
+    background: #1f1f1f;
+    color: #fff;
+    font-size: 14px;
+    transition: .3s;
+    box-sizing: border-box;
+}
+
+.caixa-cadastro input::placeholder {
+    color: #999;
+}
+
+.caixa-cadastro input:focus {
+    border-color: #F26807;
+    box-shadow: 0 0 0 3px rgba(242,104,7,.25);
+}
+
+.btn-cadastro {
+    width: 100%;
+    padding: 14px;
+    background: #F26807;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-cadastro:hover {
+    background: #ff7a1a;
+    transform: translateY(-2px);
+}
+
+.ja-tem-conta {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #bdbdbd;
+}
+
+.link-login {
+    text-align: center;
+    color: #F26807;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.link-login:hover {
+    color: #ff7a1a;
+    text-decoration: underline;
+}
+
 /*--------------------FOOTER---------------------*/
 .footer {
     background-color: #999;
@@ -1384,6 +1500,22 @@ button[type="submit"]:hover {
     }
 }
 
+/* RESPONSIVO CADASTRO */
+
+@media (max-width: 500px) {
+    .conteudo-cadastro {
+        padding: 15px;
+    }
+
+    .cadastro-box {
+        width: 90%;
+        padding: 25px;
+    }
+
+    .titulo-cadastro {
+        font-size: 28px;
+    }
+}
 /*--------------------ANIMAÇÕES----------------------------*/
 /*--------------------------------------------------------ANIMAÇÕES------------------------*/
 
@@ -1484,4 +1616,129 @@ button[type="submit"]:hover {
 
 .pagina-plano-card.pagina-plano-premium.ativo {
     box-shadow: 0 0 25px #CE5500;
+}
+
+
+/*TESTE----------------*/
+/*--------------------FICHA---------------------*/
+
+.conteudo-ficha {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.ficha-box {
+    width: 100%;
+    max-width: 380px;
+    background: #1f1f1f;
+    border: 1px solid #F26807;
+    border-radius: 16px;
+    padding: 30px;
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,.4);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.titulo-ficha {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.ficha-box > p {
+    color: #bdbdbd;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.ficha-box form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.caixa-ficha {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.caixa-ficha label {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.caixa-ficha input,
+.caixa-ficha select,
+.caixa-ficha textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    outline: none;
+    background: #1f1f1f;
+    color: #fff;
+    font-size: 14px;
+    transition: .3s;
+    box-sizing: border-box;
+}
+
+.caixa-ficha textarea {
+    resize: none;
+    min-height: 90px;
+}
+
+.caixa-ficha input::placeholder,
+.caixa-ficha textarea::placeholder {
+    color: #999;
+}
+
+.caixa-ficha input:focus,
+.caixa-ficha select:focus,
+.caixa-ficha textarea:focus {
+    border-color: #F26807;
+    box-shadow: 0 0 0 3px rgba(242,104,7,.25);
+}
+
+.btn-ficha {
+    width: 100%;
+    padding: 14px;
+    background: #F26807;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-ficha:hover {
+    background: #ff7a1a;
+    transform: translateY(-2px);
+}
+
+/* RESPONSIVO FICHA */
+
+@media (max-width: 500px) {
+    .conteudo-ficha {
+        padding: 15px;
+    }
+
+    .ficha-box {
+        width: 90%;
+        padding: 25px;
+    }
+
+    .titulo-ficha {
+        font-size: 26px;
+    }
 }
