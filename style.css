@@ -1,0 +1,1487 @@
+/* PADRÃO DE TELA */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* BASE */
+body {
+    background-color: #262626;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+/* ----------------------MENU----------------------------------- */
+#menu {
+    position: static;
+    width: auto;
+    height: auto;
+    background: none;
+}
+
+#menu ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+#menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+}
+#menu ul li a:hover {
+  color: #CE5500;
+}
+
+.menu-toggle,
+.close-menu {
+    display: none;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+    .menu-toggle {
+        display: block;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+    }
+
+    #menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: #262626;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s;
+        z-index: 1000;
+    }
+
+    #menu ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #menu ul li a {
+        font-size: 22px;
+    }
+
+    .close-menu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+    }
+
+    #menu.active {
+        right: 0;
+    }
+}
+.topo {
+    height: 60px;
+    background-color: #262626;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    border-bottom: 3px solid #f26b2b;
+}
+
+.topo img {
+    width: 100px;
+}
+
+/*-----------HOME-------------*/
+.banner {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* ---------------------------SERVIÇOS HOME------------------------------------------------ */
+.roxo {
+    color: #9747ff;
+}
+
+.titulo-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    margin: 10px;
+}
+
+.caixa-servico_home {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: #f26b2b solid 1px;
+    border-bottom: #f26b2b solid 1px;
+    padding: 15px 0;
+    margin: 20px;
+}
+
+.caixa-servico_home > div {
+    min-height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caixa-servico_home p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    padding: 10px;
+    max-width: 110px;
+}
+
+.caixa-servico_home p img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.caixa-servico_home img {
+    background: #1f1f1f;
+    border: solid 1px #494949;
+    padding: 3px;
+    border-radius: 10px;
+}
+
+.caixa-esquerda {
+    border-left: 0.5px solid #fff;
+    border-right: 0.5px solid #fff;
+}
+
+.caixa-direita {
+    border-right: 0.5px solid #fff;
+}
+
+/*-------------------------------SOBRE NÓS HOME-----------------------------------*/
+.titulo-sobrenos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.cor-sobrenos {
+    color: #F26807;
+}
+
+.sobrenos-home {
+    display: flex;
+    flex-direction: column;
+}
+
+.sobrenos-home img {
+    width: 250px;
+    margin: 20px 0;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.text_sobrenos {
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-left: 3.5px solid #6E07DC;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.text_sobrenos button {
+    margin-top: 5px;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f26b2b;
+    color: #fff;
+}
+
+/* --------------------------------------PLANOS HOME-------------------------------------- */
+
+.laranja {
+    color: #f26807;
+}
+
+.caixa-planos_home {
+    background-color: #fff;
+    margin-top: 50px;
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+.caixa-planos_home img {
+    width: 150px;
+    border-bottom: solid 1px #262626;
+}
+
+.caixa-planos_home h2 {
+    text-align: center;
+}
+
+.planos-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* ALTERADO DE .planos PARA .home-planos */
+.home-planos {
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+    font-size: 20px;
+}
+
+.plano_basico-home,
+.plano_avancado-home,
+.plano_premium-home {
+    height: 300px;
+    flex-shrink: 0;
+    background: #D9D9D9;
+    border-radius: 30px;
+    border: 3px solid #8d8d8d;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.9);
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.plano_avancado-home h3 {
+    color: #9747FF;
+}
+
+.plano_premium-home h3 {
+    color: #F26807;
+}
+
+/* ALTERADO DE .planos button PARA .home-planos button */
+.home-planos button {
+    border: none;
+    border-radius: 10px;
+    background-color: #929292;
+    font-size: 15px;
+    color: #fff;
+    padding: 8px 14px;
+}
+
+/*-----------------------------------------BAIXE O APP-----------------------------------------*/
+
+.baixo {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.baixe_app img {
+    width: 250px;
+    padding: 15px;
+}
+
+
+/*-------------TELA SOBRE NOS----------*/
+
+.pagina-sobre {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px;
+    gap: 0;
+    overflow: hidden;
+}
+
+.pagina-sobre-texto {
+    max-width: 500px;
+    z-index: 1;
+}
+
+.pagina-sobre-tag {
+    background: #d9d9d9;
+    color: #000;
+    padding: 8px 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.pagina-sobre-titulo {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.pagina-sobre-texto p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.pagina-sobre-imagem {
+    width: 63%;
+    height: 606px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 40px;
+    margin-left: -40px;
+}
+
+/* QUEM SOMOS */
+
+.pagina-sobre-quem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px;
+    gap: 40px;
+    overflow: hidden;
+}
+
+.pagina-sobre-quem-texto {
+    max-width: 450px;
+}
+
+.pagina-sobre-quem-texto h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.pagina-sobre-quem-texto span {
+    color: #7b3cff;
+}
+
+.pagina-sobre-quem-texto p {
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.pagina-sobre-quem-texto ul {
+    list-style: none;
+}
+
+.pagina-sobre-quem-texto li {
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+.pagina-sobre-quem-texto li::before {
+    content: "• ";
+    color: #fff;
+}
+
+.pagina-sobre-quem-img {
+    width: 55%;
+    height: 500px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 40px;
+    flex-shrink: 0;
+}
+
+/* POR QUE */
+
+.pagina-sobre-porque {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 60px;
+    background: #e9e9e9;
+    color: #111;
+    gap: 20px;
+}
+
+.pagina-sobre-porque-texto {
+    max-width: 550px;
+}
+
+.pagina-sobre-porque-texto h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    white-space: nowrap;
+}
+
+.pagina-sobre-porque-texto .laranja {
+    color: #ff7d1a;
+}
+
+.pagina-sobre-porque-texto .roxo {
+    color: #7b3cff;
+}
+
+.pagina-sobre-bloco {
+    margin-bottom: 25px;
+}
+
+.pagina-sobre-bloco h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.pagina-sobre-bloco p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.pagina-sobre-porque-img {
+    width: 50%;
+    height: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* COMO FUNCIONA */
+
+.pagina-sobre-como {
+    padding: 70px 60px;
+    text-align: center;
+    background: linear-gradient(to right, #2b2b2b, #1f1f1f);
+}
+
+.pagina-sobre-como h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+.pagina-sobre-cards {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.pagina-sobre-card {
+    background: #3a3a3a;
+    border-radius: 20px;
+    width: 300px;
+    padding: 40px 24px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    transition: transform 0.3s;
+}
+
+.pagina-sobre-card:hover {
+    transform: translateY(-6px);
+}
+
+.pagina-sobre-icone {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.pagina-sobre-icone img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.pagina-sobre-card p {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/*-----------------TELA PLANOS-----------------*/
+
+.pagina-planos {
+    width: 100%;
+}
+
+/* CARDS PLANOS */
+
+.pagina-planos-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 60px 20px;
+}
+
+.pagina-plano-card {
+    background: #2a2a2a;
+    padding: 30px;
+    width: 260px;
+    min-height: 360px;
+
+    border-radius: 15px;
+    border: 4px solid #666666;
+
+    box-shadow: 0 0 15px rgba(0,0,0,.5);
+
+    transition: 0.4s;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.pagina-plano-card ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+}
+
+.pagina-plano-card h3 {
+    text-align: center;
+    font-size: 20px;
+}
+
+.pagina-plano-card h2 {
+    text-align: center;
+    font-size: 19px;
+    margin: 15px 0;
+}
+
+.pagina-plano-card li {
+    font-size: 14px;
+    margin: 8px 0;
+    color: #ccc;
+}
+
+.pagina-plano-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 20px #666666;
+}
+
+.pagina-plano-destaque {
+    border-color: #9747FF;
+}
+
+.pagina-plano-destaque:hover {
+    box-shadow: 0 0 25px #9747FF;
+}
+
+.pagina-plano-premium {
+    border-color: #CE5500;
+}
+
+.pagina-plano-premium:hover {
+    box-shadow: 0 0 25px #CE5500;
+}
+
+/* BOTÕES */
+
+.pagina-plano-card button {
+    margin-top: auto;
+
+    padding: 10px 20px;
+
+    border: none;
+    border-radius: 20px;
+
+    background: #666666;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.pagina-plano-card button:hover {
+    opacity: 0.8;
+}
+
+.pagina-plano-destaque button {
+    background-color: #9747FF;
+}
+
+.pagina-plano-premium button {
+    background-color: #CE5500;
+}
+
+/* FAQ */
+
+.pagina-faq {
+    color: #fff;
+    font-size: 20px;
+}
+
+.pagina-faq-header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.pagina-faq-header span {
+    color: #CE5500;
+}
+
+.pagina-faq-content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.pagina-faq-box {
+    background: #2a2a2a;
+
+    border: solid 1px #494949;
+
+    padding: 30px;
+
+    border-radius: 40px;
+
+    max-width: 900px;
+    width: 90%;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.pagina-faq-box h4 {
+    font-size: 21px;
+    color: #F26807;
+    margin-top: 20px;
+}
+
+.pagina-faq-box h4:first-child {
+    margin-top: 0;
+}
+
+.pagina-faq-box p {
+    max-width: 800px;
+
+    font-size: 19px;
+
+    margin: 10px auto 30px auto;
+
+    color: #ccc;
+
+    line-height: 1.6;
+}
+.pagina-planos h2{
+    color: #fff;
+}
+.pagina-faq h4{
+    color: #fff;
+}
+.titulo-plano{
+    color: #fff;
+}
+/*--------------------LOGIN---------------------------*/
+
+/* LOGIN */
+.conteudo-login {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login {
+    width: 100%;
+    max-width: 310px;
+    background: #1f1f1f;
+    border: 1px solid #F26807;
+    border-radius: 16px;
+    padding: 30px;
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,.4);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.titulo-login {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.login > p {
+    color: #bdbdbd;
+    margin-bottom: 10px;
+}
+
+.login form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.caixa-login,
+.caixa-senha {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.caixa-login label,
+.caixa-senha label {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.caixa-login input,
+.caixa-senha input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    outline: none;
+    background: #1f1f1f;
+    color: #fff;
+    font-size: 14px;
+    transition: .3s;
+    box-sizing: border-box;
+}
+
+.caixa-login input::placeholder,
+.caixa-senha input::placeholder {
+    color: #999;
+}
+
+.caixa-login input:focus,
+.caixa-senha input:focus {
+    border-color: #F26807;
+    box-shadow: 0 0 0 3px rgba(242,104,7,.25);
+}
+
+.esqueci-senha {
+    text-align: right;
+    font-size: 13px;
+    color: #F26807;
+    margin-top: -5px;
+}
+
+.esqueci-senha:hover {
+    text-decoration: underline;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background: #F26807;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button[type="submit"]:hover {
+    background: #ff7a1a;
+    transform: translateY(-2px);
+}
+
+.continuar-com {
+    width: 100%;
+    height: 48px;
+    background: #1f1f1f;
+    border: 1px solid #444;
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.continuar-com:hover {
+    border-color: #F26807;
+    transform: translateY(-2px);
+}
+
+.continuar-com img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.sem-conta {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 13px;
+    color: #bdbdbd;
+}
+
+.cadastro {
+    text-align: center;
+    color: #F26807;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.cadastro:hover {
+    color: #ff7a1a;
+    text-decoration: underline;
+}
+/*--------------------FOOTER---------------------*/
+.footer {
+    background-color: #999;
+    color: white;
+    margin-top: 40px;
+}
+
+.footer-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 25px 35px;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-nav h3,
+.footer-redes h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-logo img {
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+}
+
+.footer-redes {
+    text-align: center;
+}
+
+.icones-redes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.icones-redes img {
+    width: 42px;
+    height: 42px;
+}
+
+.footer-baixo {
+    text-align: center;
+    background-color: #1f1f1f;
+    padding: 15px 25px;
+    font-size: 12px;
+}
+
+
+
+/*-----------------REPONSIVOS----------*/
+
+/*----------------------HOME-----------------*/
+/*--------------RESPONSIVO 700PX---------------*/
+@media (min-width: 700px) {
+
+    .titulo-sobrenos {
+        margin-top: 25px;
+    }
+
+    .caixa-servico_home {
+        width: 700px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .caixa-servico_home > div {
+        width: 150px;
+        text-align: center;
+        border-left: 1px solid #fff;
+    }
+
+    .sobrenos-home {
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        max-width: 1000px;
+        margin: 40px auto;
+        flex-direction: row;
+    }
+
+    .sobrenos-home img {
+        width: 360px;
+    }
+
+    .text_sobrenos {
+        width: 290px;
+        font-size: 17px;
+        padding: 18px;
+    }
+
+    .text_sobrenos button {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+}
+
+/*--------------RESPONSIVO 1000PX---------------*/
+@media(min-width:1000px) {
+
+    .caixa-servico_home {
+        width: 90%;
+    }
+
+    .caixa-servico_home > div {
+        width: 20%;
+    }
+
+    .caixa-servico_home p {
+        font-size: 15px;
+    }
+
+    .caixa-servico_home p img {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+    }
+
+    .sobrenos-home {
+        max-width: none;
+    }
+
+    .sobrenos-home img {
+        width: 40%;
+    }
+}
+
+/* MOBILE - CARROSSEL */
+@media (max-width: 700px) {
+
+    .caixa-planos_home {
+        overflow: hidden;
+    }
+
+    .planos-wrapper {
+        width: 100%;
+        overflow: hidden;
+        padding: 0;
+    }
+
+    .home-planos {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+
+        gap: 24px;
+        padding: 20px calc((100vw - 310px) / 2) 30px;
+    }
+
+    .home-planos::-webkit-scrollbar {
+        display: none;
+    }
+
+    .plano_basico-home,
+    .plano_avancado-home,
+    .plano_premium-home {
+        width: 270px;
+        min-width: 270px;
+        flex-shrink: 0;
+        scroll-snap-align: center;
+    }
+
+    .btn-plano {
+        display: none;
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 700px) {
+
+    .home-planos {
+        justify-content: center;
+        overflow-x: visible;
+        scroll-snap-type: none;
+    }
+
+    .plano_basico-home,
+    .plano_avancado-home,
+    .plano_premium-home {
+        width: 200px;
+        min-width: auto;
+    }
+
+    .btn-plano {
+        display: none;
+    }
+}
+
+
+/*-------------------REPONSIVO PLANOS---------------*/
+/* RESPONSIVO PLANOS COM CLASSES NOVAS */
+
+/* RESPONSIVO TABLET */
+
+@media (max-width: 1000px) {
+
+    .pagina-planos-cards {
+        gap: 20px;
+        margin: 60px 0;
+    }
+}
+
+/* RESPONSIVO MOBILE */
+
+@media (max-width: 550px) {
+
+    .pagina-planos {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .pagina-planos-cards {
+
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+
+        gap: 20px;
+
+        padding: 20px calc((100vw - 260px) / 2);
+
+        margin: 40px 0;
+    }
+
+    .pagina-planos-cards::-webkit-scrollbar {
+        display: none;
+    }
+
+    .pagina-plano-card {
+        width: 260px;
+        min-width: 260px;
+
+        flex: 0 0 260px;
+
+        scroll-snap-align: center;
+
+        transition: 0.4s;
+    }
+
+    .pagina-plano-card.ativo {
+        transform: translateY(-10px) scale(1.03);
+        box-shadow: 0 0 20px #666666;
+    }
+
+    .pagina-plano-card.pagina-plano-destaque.ativo {
+        box-shadow: 0 0 25px #9747FF;
+    }
+
+    .pagina-plano-card.pagina-plano-premium.ativo {
+        box-shadow: 0 0 25px #CE5500;
+    }
+
+    .pagina-faq-box {
+       
+        width: 320px;
+
+        margin: 0 auto;
+
+        display: flex;
+        flex-direction: column;
+
+        padding: 20px;
+
+        border-radius: 20px;
+    }
+
+    .pagina-faq-box h4 {
+        font-size: 18px;
+    }
+
+    .pagina-faq-box p {
+        font-size: 16px;
+    }
+}
+/*----------------------RESPONVISO SOBRE NOS------------------------*/
+
+@media (max-width: 1024px) {
+    .pagina-sobre-imagem {
+        width: 500px;
+        height: 300px;
+    }
+
+    .pagina-sobre-quem-img {
+        width: 400px;
+        height: 300px;
+    }
+
+    .pagina-sobre-porque-img {
+        width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .pagina-sobre {
+        flex-direction: column;
+        padding: 40px 24px;
+        gap: 30px;
+    }
+
+    .pagina-sobre-texto {
+        max-width: 100%;
+    }
+
+    .pagina-sobre-imagem {
+        width: 100%;
+        height: 280px;
+        border-radius: 20px;
+        margin-left: 0;
+    }
+
+    .pagina-sobre-quem {
+        flex-direction: column;
+        padding: 40px 24px;
+        gap: 30px;
+    }
+
+    .pagina-sobre-quem-texto {
+        max-width: 100%;
+    }
+
+    .pagina-sobre-quem-img {
+        width: 100%;
+        height: 280px;
+    }
+
+    .pagina-sobre-porque {
+        flex-direction: column;
+        padding: 40px 24px;
+        gap: 30px;
+    }
+
+    .pagina-sobre-porque-texto {
+        max-width: 100%;
+    }
+
+    .pagina-sobre-porque-texto h2 {
+        white-space: normal;
+        font-size: 28px;
+    }
+
+    .pagina-sobre-porque-img {
+        width: 100%;
+    }
+
+    .pagina-sobre-como {
+        padding: 40px 24px;
+    }
+
+    .pagina-sobre-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pagina-sobre-card {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 550px) {
+    .pagina-sobre-quem {
+        flex-direction: column-reverse;
+        background: #373737;
+        border: solid 1px #494949;
+        border-radius: 30px;
+        padding: 30px;
+        width: 310px;
+        margin: 0 auto 50px;
+    }
+
+    .pagina-sobre-quem img {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+    }
+
+    .pagina-sobre-quem-texto {
+        width: 100%;
+        text-align: center;
+    }
+
+    .pagina-sobre-quem-texto h2 {
+        font-size: 20px;
+    }
+
+    .pagina-sobre-quem-texto p {
+        text-align: justify;
+    }
+
+    .pagina-sobre-como img {
+        width: 100px;
+    }
+
+    .pagina-sobre-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+        width: 100%;
+    }
+
+    .pagina-sobre-card {
+        width: 290px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 3px;
+        margin: 0 auto;
+    }
+
+    .pagina-sobre-icone {
+        width: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .pagina-sobre {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+        height: 230px;
+        padding: 0;
+        overflow: hidden;
+        margin-top: 10px;
+    }
+
+    .pagina-sobre-texto {
+        position: relative;
+        z-index: 2;
+        max-width: 165px;
+        padding: 20px 5px;
+    }
+
+    .pagina-sobre-tag {
+        display: inline-block;
+        background: #e5e5e5;
+        color: #000;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 6px 14px;
+        border-radius: 0 16px 16px 0;
+        margin-left: -12px;
+        margin-bottom: 18px;
+        width: auto;
+    }
+
+    .pagina-sobre-titulo {
+        font-size: 15px;
+        line-height: 1.2;
+        color: white;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+
+    .pagina-sobre-texto p {
+        display: none;
+    }
+
+    .pagina-sobre-imagem {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 80%;
+        height: 185px;
+        object-fit: cover;
+        object-position: center top;
+        border-top-left-radius: 70px;
+        border-bottom-left-radius: 70px;
+        margin-left: 0;
+    }
+}
+/*----------------footer mobile---------------*/
+@media (max-width: 500px) {
+    .footer-conteudo {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        gap: 25px;
+    }
+
+    .footer-logo {
+        order: -1;
+        align-self: center;
+    }
+
+    .footer-logo img {
+        width: 210px;
+        
+    }
+
+
+    .icones-redes {
+        justify-content: center;
+    }
+
+    .icones-redes img {
+        
+        width: 38px;
+        height: 38px;
+    }
+
+    .footer-baixo {
+        font-size: 11px;
+        padding: 14px 18px;
+    }
+}
+
+/*--------------------ANIMAÇÕES----------------------------*/
+/*--------------------------------------------------------ANIMAÇÕES------------------------*/
+
+/* BOTÃO CARROSSEL HOME */
+.btn-plano-home {
+    display: none !important;
+}
+
+/* ANIMAÇÃO SOBRE NÓS HOME */
+.sobrenos-home > img,
+.text_sobrenos {
+    opacity: 0;
+    transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.sobrenos-home > img {
+    transform: translateX(-80px);
+}
+
+.text_sobrenos {
+    transform: translateX(80px);
+    transition-delay: 0.3s;
+}
+
+.sobrenos-home.animar > img,
+.sobrenos-home.animar .text_sobrenos {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media (max-width: 500px) {
+    .sobrenos-home > img {
+        transform: translateX(-45px);
+    }
+
+    .text_sobrenos {
+        transform: translateX(45px);
+    }
+
+    .sobrenos-home.animar > img,
+    .sobrenos-home.animar .text_sobrenos {
+        transform: translateX(0);
+    }
+}
+
+/* ANIMAÇÃO PLANOS HOME */
+.plano_basico-home,
+.plano_avancado-home,
+.plano_premium-home {
+    opacity: 0;
+    transform: translateY(-80px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.plano_basico-home.animar {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.2s;
+}
+
+.plano_avancado-home.animar {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.5s;
+}
+
+.plano_premium-home.animar {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.8s;
+}
+
+/* ANIMAÇÃO SERVIÇOS HOME */
+.animar-servico {
+    opacity: 0;
+    transform: translateY(45px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.animar-servico.ativo {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ANIMAÇÃO CARD CENTRAL - PÁGINA PLANOS */
+.pagina-plano-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.pagina-plano-card.ativo {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 20px #666666;
+}
+
+.pagina-plano-card.pagina-plano-destaque.ativo {
+    box-shadow: 0 0 25px #9747FF;
+}
+
+.pagina-plano-card.pagina-plano-premium.ativo {
+    box-shadow: 0 0 25px #CE5500;
+}
