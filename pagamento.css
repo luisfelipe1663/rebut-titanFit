@@ -17,3 +17,9 @@
 .pagamento-box label{
     font-size: 12px;
 }
+.pagamento-box {
+    width: 300px;
+    height: 400px;
+    padding: 10px;
+    background-color: #262626;
+}
