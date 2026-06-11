@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.conteudo-pagamento{
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+}
+.titulo-pagamento{
+    font-size: 15px;
+}
+.pagamento-box p{
+    font-size: 12px;
+}
+.pagamento-box label{
+    font-size: 12px;
+}
