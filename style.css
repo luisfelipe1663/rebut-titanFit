@@ -780,8 +780,7 @@ a{
 .esqueci-senha:hover {
     text-decoration: underline;
 }
-
-button[type="submit"] {
+.botao-login {
     width: 100%;
     padding: 14px;
     background: #F26807;
@@ -794,11 +793,10 @@ button[type="submit"] {
     transition: .3s;
 }
 
-button[type="submit"]:hover {
+.botao-login:hover {
     background: #ff7a1a;
     transform: translateY(-2px);
 }
-
 .continuar-com {
     width: 100%;
     height: 48px;
@@ -1024,63 +1022,6 @@ button[type="submit"]:hover {
     font-size: 12px;
 }
 
-/*PAGAMENTO*/
-
-
-.conteudo-pagamento{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.conteudo-pagamento input{
-    color: #fff;
-}
-.titulo-pagamento{
-    font-size: 15px;
-    margin-bottom: 15px;
-}
-
-.pagamento-box p{
-    font-size: 12px;
-}
-
-.pagamento-box label{
-    font-size: 12px;
-}
-
-.pagamento-box{
-    width: 300px;
-    min-height: 400px;
-    padding: 20px;
-    background-color: #262626;
-    color: #fff;
-    border: 2px solid #f26b2b;
-    border-radius: 20px;
-}
-.caixa-pagamento{
-    display: flex;
-    flex-direction: column;
-    padding: 5px 0;
-}
-.caixa-pagamento input{
-    background-color: #262626;
-    padding: 5px;
-    border: 1px solid #f26b2b;
-    border-radius: 5px;
-   
-}
-.btn-pagamento{
-    padding: 1px ;
-    border: none;
-    background-color: #f26b2b;
-    color: #fff;
-    border-radius: 5px;
-    
-}
-.titulo-cartao{
-    font-size: 15px;
-}
 /*-----------------REPONSIVOS----------*/
 
 /*----------------------HOME-----------------*/
@@ -1794,4 +1735,64 @@ button[type="submit"]:hover {
     .titulo-ficha {
         font-size: 26px;
     }
+}
+
+
+
+/*PAGAMENTO*/
+
+
+.conteudo-pagamento{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.conteudo-pagamento input{
+    color: #fff;
+}
+.titulo-pagamento{
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.pagamento-box p{
+    font-size: 12px;
+}
+
+.pagamento-box label{
+    font-size: 12px;
+}
+
+.pagamento-box{
+    width: 300px;
+    min-height: 400px;
+    padding: 20px;
+    background-color: #262626;
+    color: #fff;
+    border: 2px solid #f26b2b;
+    border-radius: 20px;
+}
+.caixa-pagamento{
+    display: flex;
+    flex-direction: column;
+    padding: 5px 0;
+}
+.caixa-pagamento input{
+    background-color: #262626;
+    padding: 5px;
+    border: 1px solid #f26b2b;
+    border-radius: 5px;
+   
+}
+.btn-pagamento{
+    padding: 1px ;
+    border: none;
+    background-color: #f26b2b;
+    color: #fff;
+    border-radius: 5px;
+    
+}
+.titulo-cartao{
+    font-size: 15px;
 }
