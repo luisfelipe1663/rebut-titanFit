@@ -1613,6 +1613,56 @@ a{
 }
 
 
+/*animação pagina planos*/
+.pagina-plano-card{
+    opacity: 0;
+    transform: translateY(-80px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.pagina-plano-card.animar{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* atraso entre os cards */
+.pagina-plano-card:nth-child(1){
+    transition-delay: 0.2s;
+}
+
+.pagina-plano-card:nth-child(2){
+    transition-delay: 0.6s;
+}
+
+.pagina-plano-card:nth-child(3){
+    transition-delay: 1s;
+}
+
+/* ANIMAÇÃO PAGAMENTO */
+
+.pagamento-esquerda,
+.pagamento-direita{
+    opacity: 0;
+    transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.pagamento-esquerda{
+    transform: translateX(-80px);
+}
+
+.pagamento-direita{
+    transform: translateX(80px);
+    transition-delay: .3s;
+}
+
+.pagina-pagamento.animar .pagamento-esquerda,
+.pagina-pagamento.animar .pagamento-direita{
+    opacity: 1;
+    transform: translateX(0);
+}
 /*TESTE----------------*/
 /*--------------------FICHA---------------------*/
 
@@ -1741,7 +1791,10 @@ a{
 
 /*PAGAMENTO*/
 
-.pagina-pagamento h1, p{
+.pagina-pagamento h1{
+color:#fff;
+}
+.pagina-pagamento P{
 color:#fff;
 }
 .pagina-pagamento{

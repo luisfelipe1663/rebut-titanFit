@@ -167,3 +167,57 @@ if (cardsContainer && cards.length > 0) {
         destacarCardCentral
     );
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const cards = document.querySelectorAll(".pagina-plano-card");
+
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if(entry.isIntersecting){
+
+                cards.forEach((card, index) => {
+
+                    setTimeout(() => {
+                        card.classList.add("animar");
+                    }, index * 400);
+
+                });
+
+                observer.disconnect();
+            }
+
+        });
+
+    }, { threshold: 0.2 });
+
+    observer.observe(document.querySelector(".pagina-planos-cards"));
+
+});
+
+
+
+//ANIMAÇÃO PAGAMENTO
+
+const pagamento = document.querySelector(".pagina-pagamento");
+
+const observerPagamento = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            pagamento.classList.add("animar");
+
+            observerPagamento.unobserve(entry.target);
+        }
+
+    });
+
+}, {
+    threshold: 0.3
+});
+
+observerPagamento.observe(pagamento);
