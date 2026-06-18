@@ -80,7 +80,6 @@ ul li {
     color: white;
  
     font-size: 18px;
- 
     white-space: nowrap;
  
     margin-bottom: 8px;
@@ -569,39 +568,39 @@ ul li {
     max-width: 1100px;
     margin: 0 auto;
 }
-
+ 
 .card,
 .card2,
 .conteudo-auxilio {
     justify-content: center;
     align-items: center;
 }
-
+ 
 .card-texto,
 .texto-auxilio {
     max-width: 450px;
 }
-
+ 
 #treinamento,
 #biblioteca,
 #profissionais {
     display: flex;
     justify-content: center;
 }
-
+ 
 #titulo,
 #educativo,
 #auxilio {
     text-align: left;
 }
-
+ 
 #leonidat,
 .texto2 {
     margin-left: auto;
     margin-right: auto;
 }
 }
-
+ 
 html,
 body {
     overflow-x: hidden;
@@ -646,6 +645,38 @@ body {
         margin-top: 0;
     }
  }
+ 
+ 
+ 
+ 
+ @media (min-width:1200px) {
+    .imagens-treinamento img{
+        width:150px;
+        margin-top: 30px;
+ 
+    }
+ 
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
 /* FOOTER */
 .footer {
@@ -831,6 +862,4 @@ body {
 .close-menu {
   display: none;
 }
- 
- 
  
