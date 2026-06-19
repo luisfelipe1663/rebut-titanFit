@@ -1,865 +1,630 @@
-* {
- 
-    padding: 0;
- 
-    margin: 0;
- 
-}
- 
-body {
- 
-    background-color: #262626;
- 
-}
- 
-ul li {
-    list-style-type: none;
-}
+
 #casal-container {
  
-    display: flex;
+ display: flex;
  
-    align-items: center;
+ align-items: center;
  
 }
  
 #casal {
  
-    position: absolute;
+ position: absolute;
  
-    right: 0;
+ right: 0;
  
-    top: 15%;
+ top: 15%;
  
-    width: clamp(310px, 45vw, 700px);
+ width: clamp(310px, 45vw, 700px);
  
-    z-index: -1;
+ z-index: -1;
  
 }
  
 #titulo-principal {
  
-    background: #D9D9D9;
+ background: #D9D9D9;
  
-    padding: 0px 10px;
+ padding: 0px 10px;
  
-    width: 70px;
+ width: 70px;
  
-    border-radius: 0px 30px 30px 0px;
+ border-radius: 0px 30px 30px 0px;
  
-    font-size: 20px;
+ font-size: 20px;
  
-    text-align: center;
+ text-align: center;
  
-    margin-top: 77px;
+ margin-top: 77px;
  
-    z-index: 2;
+ z-index: 2;
  
-    position: relative;
+ position: relative;
  
 }
  
 #descricao-servicos {
  
-    color: rgb(255, 255, 255);
+ color: rgb(255, 255, 255);
  
-    padding: 8px;
+ padding: 8px;
  
-    font-size: 12px;
+ font-size: 12px;
  
 }
  
 .laranja {
  
-    color: #FF6B00;
+ color: #FF6B00;
  
 }
  
 #titulo {
  
-    color: white;
+ color: white;
  
-    font-size: 18px;
-    white-space: nowrap;
+ font-size: 18px;
+ white-space: nowrap;
  
-    margin-bottom: 8px;
+ margin-bottom: 8px;
  
 }
  
 .destaque {
  
-    color: blueviolet;
+ color: blueviolet;
  
 }
  
 .imagens-treinamento img {
  
-    width: 40%;
+ width: 40%;
  
-    margin-left: 25%;
+ margin-left: 25%;
  
 }
  
 #treinamento {
  
-    margin: 0 auto;
+ margin: 0 auto;
  
-    padding: 2px;
+ padding: 2px;
  
-    margin-top: 80px;
+ margin-top: 80px;
  
 }
- 
  
 #texto_treino {
  
-    color: white;
+ color: white;
  
-    padding: 0 20px;
+ padding: 0 20px;
  
-    font-size: 15px;
+ font-size: 15px;
  
-    margin-top: 0;
+ margin-top: 0;
  
-    line-height: 1.4;
+ line-height: 1.4;
  
 }
  
- 
 .card {
  
-    background-color: #2a2a2a;
+ background-color: #2a2a2a;
  
-    border-radius: 16px;
+ border-radius: 16px;
  
-    border: 1px solid #3a3a3a;
+ border: 1px solid #3a3a3a;
  
-    padding: 10%;
+ padding: 10%;
  
-    margin: 20px 30px;
+ margin: 20px 30px;
  
 }
  
 .card2 {
  
-    background-color: #2a2a2a;
+ background-color: #2a2a2a;
  
-    border-radius: 16px;
+ border-radius: 16px;
  
-    border: 1px solid #3a3a3a;
+ border: 1px solid #3a3a3a;
  
-    padding: 10%;
+ padding: 10%;
  
-    margin: 20px 30px;
-    margin-bottom: 50px;
+ margin: 20px 30px;
+ margin-bottom: 50px;
  
 }
  
 #exercicios img {
  
-    width: 40%;
+ width: 40%;
  
-    margin-left: 25%;
+ margin-left: 25%;
  
 }
  
 .roxo {
  
-    color: #8B00FF;
+ color: #8B00FF;
  
 }
  
 #educativo {
  
-    margin: 0 auto;
+ margin: 0 auto;
  
-    color: rgb(255, 255, 255);
+ color: rgb(255, 255, 255);
  
-    font-size: 18px;
+ font-size: 18px;
  
-    white-space: nowrap;
+ white-space: nowrap;
  
-    margin-bottom: 8px;
+ margin-bottom: 8px;
  
 }
  
 #Acesso {
  
-    color: rgb(255, 255, 255);
+ color: rgb(255, 255, 255);
  
-    padding: 0 20px;
+ padding: 0 20px;
  
-    font-size: 15px;
+ font-size: 15px;
  
-    margin-top: 0;
+ margin-top: 0;
  
-    line-height: 1.4;
+ line-height: 1.4;
  
 }
  
 #profissionais {
-    padding: 50px 0; /* aumente esse valor conforme precisar */
+ padding: 50px 0; /* aumente esse valor conforme precisar */
 }
  
 #auxilio {
  
-    margin: 0 auto;
+ margin: 0 auto;
  
-    color: #fff;
+ color: #fff;
  
-    font-size: 18px;
+ font-size: 18px;
  
-    white-space: nowrap;
+ white-space: nowrap;
  
-    margin-bottom: 20px;
+ margin-bottom: 20px;
  
-    margin-left: 25%;
+ margin-left: 25%;
  
 }
  
 #personal {
  
-    color: #fff;
+ color: #fff;
  
-    padding: 0 50px;
+ padding: 0 50px;
  
-    font-size: 15px;
+ font-size: 15px;
  
-    margin-top: 20px;
+ margin-top: 20px;
  
-    line-height: 1.4;
+ line-height: 1.4;
  
 }
  
 #leonida img {
  
-    width: 50px;
+ width: 50px;
  
-    margin-left: 85%;
+ margin-left: 85%;
  
-    transform-origin: center;
+ transform-origin: center;
  
 }
  
- 
 #ia {
  
-    color: white;
+ color: white;
  
-    padding: 0 20px;
+ padding: 0 20px;
  
-    font-size: 15px;
+ font-size: 15px;
  
-    margin-top: 0;
+ margin-top: 0;
  
-    line-height: 1.4;
+ line-height: 1.4;
  
 }
  
 .texto2 {
  
-    background-color: #373737;
+ background-color: #373737;
  
-    border-radius: 16px 16px 16px 16px;
+ border-radius: 16px 16px 16px 16px;
  
-    padding: 20px;
+ padding: 20px;
  
 }
  
 #leonida {
  
-    margin-left: 15%;
+ margin-left: 15%;
  
 }
  
 #musculacao img {
-    width: 80%;
-    max-width: 350px;
-    margin: 0 auto;
-    display: block;
+ width: 80%;
+ max-width: 350px;
+ margin: 0 auto;
+ display: block;
 }
  
 @media (min-width: 375px) {
  
-    .imagens-treinamento {
+ .imagens-treinamento {
  
-        margin-left: 25px;
+ margin-left: 25px;
  
-    }
+ }
  
-    #exercicios {
+ #exercicios {
  
-        margin-left: 25px;
+ margin-left: 25px;
  
-    }
+ }
  
-    #casal {
+ #casal {
  
-        width: 96%
+ width: 96%
  
-    }
+ }
  
 }
- 
  
 @media (min-width: 400px) {
  
-    #casal {
+ #casal {
  
-        width: 96%
+ width: 96%
  
-    }
+ }
  
-    #descricao-servicos {
+ #descricao-servicos {
  
-        font-size: 15px;
+ font-size: 15px;
  
-    }
+ }
  
-    #titulo-principal {
+ #titulo-principal {
  
-        width: 90px;
+ width: 90px;
  
-        font-size: 25px;
+ font-size: 25px;
  
-    }
+ }
  
-    .card {
+ .card {
  
-        margin-top: 10%;
+ margin-top: 10%;
  
-    }
+ }
  
-    .card2 {
+ .card2 {
  
-        margin-top: 10%;
+ margin-top: 10%;
  
-    }
+ }
  
-    #auxilio {
+ #auxilio {
  
-        margin-left: 32%;
+ margin-left: 32%;
  
-    }
+ }
  
 }
  
- 
 @media (min-width: 455px) {
  
-    .card {
+ .card {
  
-        margin-top: 15%;
+ margin-top: 15%;
  
-    }
+ }
  
-    .card2 {
+ .card2 {
  
-        margin-top: 15%;
+ margin-top: 15%;
  
-    }
+ }
  
 }
  
 @media (min-width: 520px) {
  
-    .card {
+ .card {
  
-        margin-top: 20%;
+ margin-top: 20%;
  
-    }
+ }
  
-    .card2 {
+ .card2 {
  
-        margin-top: 20%;
+ margin-top: 20%;
  
-    }
+ }
  
-    #titulo {
+ #titulo {
  
-        font-size: 20px;
+ font-size: 20px;
  
-    }
+ }
  
-    #texto_treino {
+ #texto_treino {
  
-        font-size: 18px;
+ font-size: 18px;
  
-    }
+ }
  
-    #educativo {
+ #educativo {
  
-        margin-left: 10%;
+ margin-left: 10%;
  
-        font-size: 20x;
+ font-size: 20x;
  
-    }
+ }
  
-    #Acesso {
+ #Acesso {
  
-        font-size: 18px;
+ font-size: 18px;
  
-    }
+ }
  
 }
  
 @media (min-width: 580px) {
  
-    #titulo-principal {
-        width: 130px;
-        font-size: 30px;
-    }
+ #titulo-principal {
+ width: 130px;
+ font-size: 30px;
+ }
  
-    #descricao-servicos {
+ #descricao-servicos {
  
-        font-size: 18px;
+ font-size: 18px;
  
-    }
- 
+ }
  
 }
  
 @media (min-width: 700px) {
  
-    .card {
+ .card {
  
-        display: flex;
+ display: flex;
  
-        flex-direction: row-reverse;
+ flex-direction: row-reverse;
  
-        background: transparent;
+ background: transparent;
  
-        border: none;
+ border: none;
  
-        box-shadow: none;
+ box-shadow: none;
  
-        border-radius: 0;
+ border-radius: 0;
  
-        padding: 0;
+ padding: 0;
  
-        margin-top: 30%;
+ margin-top: 30%;
  
-    }
+ }
  
-    .imagens-treinamento {
+ .imagens-treinamento {
  
-        width: 65%;
+ width: 65%;
  
-        position: relative;
+ position: relative;
  
-        left: 13%;
+ left: 13%;
  
-    }
+ }
  
-    #texto_treino {
+ #texto_treino {
  
-        font-size: 15px;
+ font-size: 15px;
  
-    }
+ }
  
-    #titulo {
+ #titulo {
  
-        margin-bottom: 20px;
+ margin-bottom: 20px;
  
-        margin-left: 30px;
+ margin-left: 30px;
  
-    }
+ }
  
-    #texto_treino {
+ #texto_treino {
  
-        margin-left: 30px;
+ margin-left: 30px;
  
-    }
+ }
  
-    .card2 {
+ .card2 {
  
-        display: flex;
+ display: flex;
  
-        background: transparent;
+ background: transparent;
  
-        border: none;
+ border: none;
  
-        box-shadow: none;
+ box-shadow: none;
  
-        border-radius: 0;
+ border-radius: 0;
  
-        padding: 0;
+ padding: 0;
  
-    }
+ }
  
-    #exercicios {
+ #exercicios {
  
-        width: 60%;
+ width: 60%;
  
-        margin-left: -10%;
+ margin-left: -10%;
  
-    }
+ }
  
-    #texto_treino {
+ #texto_treino {
  
-        font-size: 15px;
+ font-size: 15px;
  
-    }
+ }
  
-    #profissionais {
+ #profissionais {
  
-        margin-top: 15%;
+ margin-top: 15%;
  
-    }
+ }
  
-    #educativo {
+ #educativo {
  
-        margin-bottom: 20px;
+ margin-bottom: 20px;
  
-    }
+ }
 #musculacao {
-    flex-shrink: 0;
+ flex-shrink: 0;
 }
  
-    .conteudo-auxilio {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    gap: 30px;
+ .conteudo-auxilio {
+ display: flex;
+ flex-direction: row-reverse;
+ align-items: center;
+ gap: 30px;
 }
  
 .texto-auxilio {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 4%;
-   
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ padding-left: 4%;
+ 
 }
  
 #auxilio {
-    text-align: left;
-    margin: 10px 0 10px 0;
-    font-size: 25px;
+ text-align: left;
+ margin: 10px 0 10px 0;
+ font-size: 25px;
 }
  
 #personal {
-    margin: 0;
-    padding-left: 18px;
-    font-size: 18px;
+ margin: 0;
+ padding-left: 18px;
+ font-size: 18px;
 }
  
 #musculacao img {
-    width: 300px;
-    border-radius: 8px;
-    margin-left: -10%;
+ width: 300px;
+ border-radius: 8px;
+ margin-left: -10%;
 }
  
- 
 #leonidat{
-    margin-left: 34%;
-    margin-top: 3%;
-   
+ margin-left: 34%;
+ margin-top: 3%;
+ 
 }
  
 .texto2{
-    background-color: #373737;
-    border-radius: 16px 16px 16px 16px;
-    padding: 20px;
-    width: 60%;
-    margin-left: 15%;
+ background-color: #373737;
+ border-radius: 16px 16px 16px 16px;
+ padding: 20px;
+ width: 60%;
+ margin-left: 15%;
  
 }
  .container {
-    max-width: 1100px;
-    margin: 0 auto;
+ max-width: 1100px;
+ margin: 0 auto;
 }
  
 .card,
 .card2,
 .conteudo-auxilio {
-    justify-content: center;
-    align-items: center;
+ justify-content: center;
+ align-items: center;
 }
  
 .card-texto,
 .texto-auxilio {
-    max-width: 450px;
+ max-width: 450px;
 }
  
 #treinamento,
 #biblioteca,
 #profissionais {
-    display: flex;
-    justify-content: center;
+ display: flex;
+ justify-content: center;
 }
  
 #titulo,
 #educativo,
 #auxilio {
-    text-align: left;
+ text-align: left;
 }
  
 #leonidat,
 .texto2 {
-    margin-left: auto;
-    margin-right: auto;
+ margin-left: auto;
+ margin-right: auto;
 }
 }
  
-html,
-body {
-    overflow-x: hidden;
-    width: 100%;
-}
+
  @media (min-width:1000px) {
-    #casal{
-        width: 70%;
-    }
-    #titulo-principal {
-        font-size: 40px;
-         padding: 0px 30px;
-    }
-    #descricao-servicos{
-        font-size: 20px;
-    }
-    .imagens-treinamento{
-        width: 550px;
-    }
-    #titulo{
-        font-size: 30px;
-    }
-    #texto_treino{
-        font-size:20px;
-    }
-    .card{
-        margin-top: 20%;
-    }
-    .card2{
-        gap: 200px;
-    }
-    #exercicios img{
-        width: 200px;
-    }
-    #educativo{
-        font-size: 30px;
-    }
-    #Acesso{
-        font-size: 20px;
-    }
-    #profissionais{
-        margin-top: 0;
-    }
+ #casal{
+ width: 70%;
  }
- 
- 
- 
+ #titulo-principal {
+ font-size: 40px;
+ padding: 0px 30px;
+ }
+ #descricao-servicos{
+ font-size: 20px;
+ }
+ .imagens-treinamento{
+ width: 550px;
+ }
+ #titulo{
+ font-size: 30px;
+ }
+ #texto_treino{
+ font-size:20px;
+ }
+ .card{
+ margin-top: 20%;
+ }
+ .card2{
+ gap: 200px;
+ }
+ #exercicios img{
+ width: 200px;
+ }
+ #educativo{
+ font-size: 30px;
+ }
+ #Acesso{
+ font-size: 20px;
+ }
+ #profissionais{
+ margin-top: 0;
+ }
+ }
  
  @media (min-width:1200px) {
-    .imagens-treinamento img{
-        width:150px;
-        margin-top: 30px;
- 
-    }
+ .imagens-treinamento img{
+ width:150px;
+ margin-top: 30px;
  
  }
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-/* FOOTER */
-.footer {
-  background-color: #999;
-  color: white;
-  margin-top: 40px;
-}
- 
-.footer-conteudo {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 25px 35px;
-}
- 
-.footer-nav {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
- 
-.footer-nav h3,
-.footer-redes h3 {
-  font-size: 14px;
-  margin-bottom: 5px;
-}
- 
-.footer-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-}
- 
-.footer-logo img {
-  width: 300px;
-}
- 
-.footer-redes {
-  text-align: center;
-}
- 
-.icones-redes {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 10px;
-}
- 
-.icones-redes img {
-  width: 42px;
-  height: 42px;
-}
- 
-.footer-baixo {
-  text-align: center;
-  background-color: #1f1f1f;
-  padding: 15px 25px;
-  font-size: 12px;
-}
- 
-/* MENU MOBILE */
-@media (max-width: 600px) {
-  .menu-toggle {
-    display: block;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-  }
- 
-  #menu {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 70%;
-    height: 100vh;
-    background-color: #262626;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: 0.3s;
-    z-index: 1000;
-  }
- 
-  #menu.active {
-    right: 0;
-  }
- 
-  #menu ul {
-    flex-direction: column;
-    gap: 20px;
-  }
- 
-  #menu ul li a {
-    font-size: 22px;
-  }
- 
-  .close-menu {
-    display: block;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-  }
-}
- 
- 
-/* FOOTER MOBILE */
-@media (max-width: 500px) {
-  .footer-conteudo {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    gap: 25px;
-  }
- 
-  .footer-logo {
-    order: -1;
-    align-self: center;
-  }
- 
-  .footer-logo img {
-    width: 210px;
-  }
- 
-  .icones-redes {
-    justify-content: center;
-  }
- 
-  .icones-redes img {
-    width: 38px;
-    height: 38px;
-  }
- 
-  .footer-baixo {
-    font-size: 11px;
-    padding: 14px 18px;
-  }
-}
- 
-/* HEADER */
-.topo {
-  height: 60px;
-  background-color: #262626;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-  border-bottom: 3px solid #f26b2b;
-}
- 
-.topo img {
-  width: 100px;
-}
- 
-#menu {
-  position: static;
-  width: auto;
-  height: auto;
-  background: none;
-}
- 
-#menu ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-}
- 
-#menu ul li a {
-  color: white;
-  font-size: 16px;
-  padding: 10px;
-}
- 
-#menu ul li a:hover {
-  color: #CE5500;
-}
- 
-.menu-toggle,
-.close-menu {
-  display: none;
-}
- 
+ }
+
