@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serviços</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serviços</title>
+  
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+ 
+<header class="topo">
 
-    <!-- HEADER -->
-    <header class="topo">
         <img src="fotos/logo_txt.png" alt="Titan Fit">
 
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            ☰
+        </div>
 
         <nav id="menu">
             <div class="close-menu" onclick="toggleMenu()">✖</div>
@@ -22,116 +23,82 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="servico.html">Serviços</a></li>
-                <li><a href="sobre-nos.html">Sobre Nós</a></li>
+                <li><a href="sobre-nos.html">Sobre nós</a></li>
                 <li><a href="planos.html">Plano Premium</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="#" data-open-login id="open-login">Login</a></li>
             </ul>
         </nav>
     </header>
-
-    <main id="servicos-page">
-
-      <section id="servicos-page">
-    <h1 id="servicos-titulo-principal">Serviços</h1>
-
-    <p id="servicos-descricao">
-        Nosso ecossistema<br>
-        completo para sua <br>
-        <span class="servicos-laranja">evolução</span><br>
+ 
+<div class="linha"></div>
+ 
+<!-- HERO SERVIÇOS -->
+<section class="servicos-hero">
+  <div class="texto">
+    <span class="tag">Serviços</span>
+    <h1>
+      Nosso ecossistema completo<br>
+      para sua <span class="laranja">evolução</span>
+    </h1>
+    <p>
+      Treinos personalizados, nutrição, conteúdo e acompanhamento profissional
+      integrados em uma única plataforma para garantir resultados consistentes.
     </p>
+  </div>
+  <img class="servicos-casal" src="fotos/casal.png" alt="casal treinando">
 </section>
-
-<div id="servicos-casal-container">
-    <img id="servicos-casal" src="fotos/casal.png" alt="casal treinando">
-</div>
-
+ 
 <!-- TREINAMENTO -->
-<section id="servicos-treinamento">
-    <div class="container">
-        <div class="servicos-card">
-
-            <div class="servicos-imagens-treinamento">
-                <img src="fotos/celular1.png" alt="musculação">
-            </div>
-
-            <div class="servicos-card-texto">
-                <h2 id="servicos-titulo">
-                    Treinamento <span class="servicos-destaque">Personalizado</span>
-                </h2>
-
-                <ul id="servicos-texto_treino">
-                    <li>Geração de treinos personalizados com base nos dados do usuário</li>
-                    <li>Adaptação automática conforme evolução e desempenho</li>
-                    <li>Planos para diferentes níveis: iniciante, intermediário e avançado</li>
-                    <li>Flexibilidade para treino em casa ou na academia</li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
+<section class="servicos-card servicos-card-primeiro">
+  <div class="servicos-card-img">
+    <img src="fotos/celular1.png" alt="musculação">
+  </div>
+  <div class="servicos-card-texto">
+    <h2>Treinamento <span class="roxo">Personalizado</span></h2>
+    <ul>
+      <li>Geração de treinos personalizados com base nos dados do usuário</li>
+      <li>Adaptação automática conforme evolução e desempenho</li>
+      <li>Planos para diferentes níveis: iniciante, intermediário e avançado</li>
+      <li>Flexibilidade para treino em casa ou na academia</li>
+    </ul>
+  </div>
 </section>
-
+ 
 <!-- BIBLIOTECA -->
-<section id="servicos-biblioteca">
-    <div class="container">
-        <div class="servicos-card2">
-
-            <div id="servicos-exercicios">
-                <img src="fotos/celular2.png" alt="descrição de treino">
-            </div>
-
-            <div class="servicos-card-texto">
-                <h2 id="servicos-educativo">
-                    Biblioteca de <span class="servicos-laranja">Exercícios</span> e<br>
-                    conteúdos <span class="servicos-roxo">Educativo</span>
-                </h2>
-
-                <ul id="servicos-Acesso">
-                    <li>Acesso a videoaulas de exercícios</li>
-                    <li>Biblioteca estruturada de movimentos e técnicas</li>
-                    <li>Conteúdos educativos sobre treino, saúde e bem-estar</li>
-                    <li>Atualização contínua de conteúdo dentro do app</li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
+<section class="servicos-card">
+  <div class="servicos-card-img">
+    <img src="fotos/celular2.png" alt="descrição de treino">
+  </div>
+  <div class="servicos-card-texto">
+    <h2>
+      Biblioteca de <span class="laranja">Exercícios</span> e<br>
+      conteúdos <span class="roxo">Educativo</span>
+    </h2>
+    <ul>
+      <li>Acesso a videoaulas de exercícios</li>
+      <li>Biblioteca estruturada de movimentos e técnicas</li>
+      <li>Conteúdos educativos sobre treino, saúde e bem-estar</li>
+      <li>Atualização contínua de conteúdo dentro do app</li>
+    </ul>
+  </div>
 </section>
-
+ 
 <!-- PROFISSIONAIS -->
-<section id="servicos-profissionais">
-    <div class="container">
-
-        <div class="servicos-texto">
-            <div class="servicos-conteudo-auxilio">
-
-                <div id="servicos-musculacao">
-                    <img src="fotos/Personal (2).png" alt="Personal Trainer">
-                </div>
-
-                <div class="servicos-texto-auxilio">
-                    <h2 id="servicos-auxilio">
-                        Auxílio de
-                        <span class="servicos-roxo">profissionais</span>
-                    </h2>
-
-                    <ul id="servicos-personal">
-                        <li>Acompanhamento com profissionais de educação física sob demanda</li>
-                        <li>Orientação para execução correta dos exercícios</li>
-                        <li>Suporte para dúvidas e adaptação de treinos</li>
-                        <li>Maior segurança e confiança durante a jornada do usuário</li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-
-    </div>
+<section class="servicos-profissionais">
+  <div class="servicos-profissionais-texto">
+    <h2>Auxílio de<br><span class="roxo">profissionais</span></h2>
+    <ul>
+      <li>Acompanhamento com profissionais de educação física sob demanda</li>
+      <li>Orientação para execução correta dos exercícios</li>
+      <li>Suporte para dúvidas e adaptação de treinos</li>
+      <li>Maior segurança e confiança durante a jornada do usuário</li>
+    </ul>
+  </div>
+  <img class="servicos-profissionais-img" src="fotos/Personal (2).png" alt="Personal Trainer">
 </section>
-    </main>
-
-    <!-- FOOTER -->
-   <footer class="footer">
+ 
+<!-- FOOTER -->
+ <footer class="footer">
         <div class="footer-conteudo">
             <div class="footer-nav">
                 <h3>navegação</h3>
@@ -162,9 +129,7 @@
             </p>
         </div>
     </footer>
-
-    <script src="interacao.js"></script>
-
+ <script src="interacao.js"></script>
 </body>
-
 </html>
+ 
