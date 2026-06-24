@@ -1,14 +1,11 @@
-const path = require('path');
-
-// Arrays dos objetos
 const usuarios = [];
 const fichas = [];
 
-// Função para cadastrar usuario
+// CADASTRO
 function cadastrarUsuario(req, res) {
-    const { nome, email, senha } = req.body;
+    const { nome, email, senha, tipo } = req.body;
 
-    if (!nome || !email || !senha) {
+    if (!nome || !email || !senha || !tipo) {
         return res.send(`
             <h1>Erro ao realizar cadastro</h1>
             <p>Preencha todos os campos</p>
@@ -16,7 +13,7 @@ function cadastrarUsuario(req, res) {
         `);
     }
 
-    const usuarioExistente = usuarios.find((usuario) => usuario.email === email);
+    const usuarioExistente = usuarios.find(u => u.email === email);
 
     if (usuarioExistente) {
         return res.redirect("/cadastro?erro=email");
@@ -26,76 +23,80 @@ function cadastrarUsuario(req, res) {
         id: Date.now(),
         nome,
         email,
-        senha, // ⚠️ Ideally use bcrypt to hash before storing
+        senha,
+        tipo
     };
 
     usuarios.push(novoUsuario);
-    console.log("Usuários cadastrados:", usuarios);
 
-    res.redirect(`/ficha.html?email=${encodeURIComponent(email)}`);
+    console.log("Usuários:", usuarios);
+
+    // REDIRECIONAMENTO
+    if (tipo === "usuario") {
+    return res.redirect(`/ficha.html?email=${encodeURIComponent(email)}`);
 }
 
-// Função para preencher a ficha
+    if (tipo === "professor") {
+        return res.redirect(`/ficha-professor.html?email=${encodeURIComponent(email)}`);
+    }
+
+    return res.send("Tipo inválido");
+}
+
+// FICHA USUÁRIO
 function fichaUsuario(req, res) {
     const { idade, altura, peso, objetivo, nivel, email } = req.body;
 
-    // Valida campos obrigatórios
     if (!idade || !altura || !peso || !objetivo || !nivel || !email) {
-        return res.send(`
-            <h1>Erro ao preencher ficha</h1>
-            <p>Preencha todos os campos</p>
-            <a href="/ficha.html">Voltar</a>
-        `);
+        return res.send("Preencha todos os campos");
     }
 
-    const usuarioEncontrado = usuarios.find((u) => u.email === email);
+    const usuario = usuarios.find(u => u.email === email);
 
-    if (!usuarioEncontrado) {
+    if (!usuario) {
         return res.send("Usuário não encontrado");
     }
 
-    // Evita ficha duplicada — atualiza se já existir
-    const fichaExistente = fichas.find((f) => f.usuarioEmail === email);
-
-    if (fichaExistente) {
-        Object.assign(fichaExistente, { idade, altura, peso, objetivo, nivel });
-    } else {
-        fichas.push({
-            usuarioEmail: email,
-            idade,
-            altura,
-            peso,
-            objetivo,
-            nivel,
-        });
-    }
+    fichas.push({
+        usuarioEmail: email,
+        idade,
+        altura,
+        peso,
+        objetivo,
+        nivel
+    });
 
     console.log("Fichas:", fichas);
+
     return res.redirect("/login.html");
 }
 
-// Função para realizar login
+// LOGIN
 function realizarLogin(req, res) {
     const { email, senha } = req.body;
 
-    if (!email || !senha) {
-        return res.redirect("/login?erro=campos");
-    }
-
-    const usuarioEncontrado = usuarios.find(
-        (usuario) => usuario.email === email && usuario.senha === senha
+    const usuario = usuarios.find(
+        u => u.email === email && u.senha === senha
     );
 
-    if (!usuarioEncontrado) {
-        return res.redirect("/login?erro=senha");
+    if (!usuario) {
+        return res.redirect("/login?erro=login");
     }
 
-    // ✅ Bug fix: redireciona em caso de sucesso
-    return res.redirect("/dashboard.html");
+    // REDIRECIONAMENTO POR TIPO
+    if (usuario.tipo === "usuario") {
+        return res.redirect("/dashboard-usuario.html");
+    }
+
+    if (usuario.tipo === "professor") {
+        return res.redirect("/dashboard-professor.html");
+    }
+
+    return res.redirect("/index.html");
 }
 
 module.exports = {
     cadastrarUsuario,
     fichaUsuario,
-    realizarLogin,
+    realizarLogin
 };
